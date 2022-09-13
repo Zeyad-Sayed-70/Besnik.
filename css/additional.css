@@ -1,0 +1,154 @@
+.counters {
+    background-color: #231A36;
+}
+.famous .box {
+    position: relative;
+}
+.famous .box .info {
+    position: absolute;
+    left: -50px;
+    bottom: -50px;
+    background-color: #fff;
+    box-shadow: 1px 2px 2px 2px #3333331c;
+}
+@media (max-width: 991px) {
+    .famous .box .info {
+        left: 17px;
+        bottom: -90px;
+    }
+}
+@media (max-width: 767px) {
+    .famous .box .info {
+        left: 50px;
+        bottom: -30px;
+    }
+}
+.famous .box .info span {
+    font-size: 10px;
+}
+.famous .box .info button {
+    color: #B33CDB;
+    font-size: 14px;
+}
+/* Start Solutions */
+.solutions {
+    overflow: hidden;
+}
+@media (max-width: 767px) {
+    .solutions .info {
+        margin-top: 1rem;
+    }
+}
+.solutions .info span {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.solutions .info p {
+    max-width: 350px;
+}
+.solutions .image img  {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
+@media (min-width: 1199px) {
+    .solutions .image img {
+        width: auto;
+    }
+}
+.solutions .info button {
+    font-size: .75rem;
+}
+.solutions .row-1 span {
+    color: #B33CDB;
+}
+.solutions .row-2 span {
+    color: #FBBA33;
+}
+.solutions .row-3 span {
+    color: #DE2879;
+}
+/* End Solutions */
+/* Start Happy Clients slides */
+.happy-client .slide {
+    display: flex;
+    align-items: center;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+}
+.happy-client .slide .switcher {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+.happy-client .slide .switcher button {
+    border: 1px solid #33333354;
+    border-radius: 6px;
+    background-color: #fff;
+}
+.happy-client .slide .switcher button:hover {
+    background-color: rgb(242, 242, 242);
+}
+.happy-client .slide .switcher i {
+    font-weight: 900;
+}
+.happy-client .slide .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+}
+.happy-client .slide .prev {
+    left: -100%;
+    opacity: 0;
+}
+.happy-client .slide .box.currnet {
+    left: 0;
+    z-index: 100;
+    opacity: 1;
+}
+.happy-client .slide .box.next {
+    left: 100%;
+    opacity: 0;
+}
+.happy-client .slide .box .info {
+    width: fit-content;
+}
+.happy-client .slide .box .info img {
+    width: 60px;
+    height: 60px;
+}
+.happy-client .slide .box .info span {
+    font-size: 14px;
+}
+.happy-client .slide .box .info p {
+    max-width: 400px
+}
+.happy-client .slide .box .image img {
+
+}
+/* End Happy Clients slides */
+/* Start Subscribe */
+.subscribe {
+    background: #8A2387;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 1rem;
+    width: 750px;
+    max-width: 100%;
+}
+.subscribe p {
+    color:#f9f9f9;
+}
+.subscribe button {
+    font-size: .85rem;
+}
+/* End Subscribe */

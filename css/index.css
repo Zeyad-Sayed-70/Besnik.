@@ -1,0 +1,441 @@
+*  {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.icon-btn {
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0;
+}
+.main-title h1 {
+    text-transform: capitalize;
+    max-width: 520px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+.main-title p {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.copyright {
+    font-size: 14px;
+}
+.footer {
+    font-size: 14px;
+}
+
+/* Start Header */
+.header {
+    position: relative;
+    overflow: hidden;
+}
+.header .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 480px;
+    background: #8A2387;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    z-index: -1;
+}
+@media (max-width: 767px) {
+    .header .bg {
+        min-height: 320px
+    }
+}
+.header svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 300px;
+    width: 100%;
+}
+.header nav {
+    color: rgb(248,249,250) !important;
+    font-size: 16px;
+}
+.header nav .navbar-nav {
+    flex: 1;
+    justify-content: center;
+}
+.header nav button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    border-radius: 50px;
+    background-color: #ffffff2b;
+    font-size: 14px;
+}
+
+/* Cards */
+.card-1 {
+    width: 320px;
+    border-radius: 6px;
+    box-shadow: 1px 2px 2px 2px #80808038;
+    user-select: none;
+}
+.card-1 div:first-of-type {
+    border-radius: 6px;
+    background-color: #e8e8e8;
+}
+.card-1 div:last-of-type {
+    flex: 1;
+}
+.card-1 span {
+    height: 10px;
+    background-color: #e8e8e8;
+    border-radius: 50px;
+    margin-top: .5rem;
+}
+.card-1 span:last-of-type {
+    width: 70%;
+}
+.card-2 {
+    width: 140px;
+    border-radius: 6px;
+    box-shadow: 1px 2px 2px 2px #80808038;
+    user-select: none;
+}
+.card-2 img {
+    width: calc(100% / 3 - .5rem);
+}
+.card-3 {
+    width: 300px;
+    height: 340px;
+    border-radius: 6px;
+    box-shadow: 1px 2px 2px 2px #80808038;
+    user-select: none;
+}
+.card-3 img {
+    width: 16px;
+}
+
+/* circle progress */
+.circle-wrap {
+    position: relative;
+    margin: 2rem auto;
+    width: 230px;
+    height: 230px;
+    background: #f3f3f3;
+    border-radius: 50%;
+}
+.circle-wrap::before {
+    content: '75% of the media for #sunrise are photos.';
+    width: 160px;
+    height: 60px;
+    position: absolute;
+    left: -50px;
+    top: 0;
+    background: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 10px;
+    font-size: .5rem;
+    padding: .5rem;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+.circle-wrap::after {
+    content: '';
+    border: 10px solid;
+    border-color: #333 transparent transparent;
+    position: absolute;
+    z-index: 1000;
+    top: 60px;
+    left: 75px;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+.circle-wrap:hover::before,
+.circle-wrap:hover::after {
+    opacity: 1;
+}
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.mask .fill {
+    clip: rect(0px, 115px, 230px, 0px);
+    background-color: #de2879;
+}
+
+.circle-wrap .circle .mask {
+    clip: rect(0px, 230px, 230px, 115px);
+}
+
+.mask.full,
+.circle .fill {
+    animation: fill ease-in-out 3s;
+    transform: rotate(100deg);
+}
+
+.circle-wrap .inside-circle {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: #fff;
+    line-height: 190px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #757575;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 2.5em;
+    user-select: none;
+}
+
+@keyframes fill{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(100deg);
+  }
+}
+.card-4 {
+    width: fit-content;
+    width: 230px;
+    height: 260px;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 1px 2px 2px 2px #80808038;
+    position: relative;
+    user-select: none;
+}
+.card-4 .bg-card-4 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 6px;
+    z-index: -1;
+    filter: blur(1px);
+    opacity: 0.2;
+}
+.card-4 h1 {
+    color: #ff4d4a;
+}
+.card-4 div:first-of-type {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    object-fit: cover;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+}
+.card-5 {
+    width: 320px;
+    border-radius: 6px;
+    box-shadow: 1px 2px 2px 2px #80808038;
+    user-select: none;
+}
+.card-5 img {
+    width: 16px;
+}
+.card-5 .graph {
+    user-select: none;
+}
+.card-5 .graph div:first-of-type span {
+    position: relative;
+}
+.card-5 .graph div:first-of-type span::after {
+    content: '';
+    width: 275px;
+    height: 1px;
+    background-color: #2f2f2f1c;
+    position: absolute;
+    left: 21px;
+    top: 23px;
+}
+.card-5 .graph div:last-of-type .p-span {
+    width: 10px;
+    height: 100%;
+    display: flex;
+    align-items: end;
+}
+.card-5 .graph div:last-of-type .p-span span {
+    width: 100%;
+    height: 100%;
+    background-color: #5f6dff;
+    display: block;
+    border-radius: 8px 8px 0 0;
+    animation: topSmoothly 2s;
+    position: relative;
+}
+.card-5 .graph div:last-of-type .p-span span::before {
+    counter-reset: variable var(--variable);
+    content: counter(variable) '%';
+    width: 40px;
+    height: 25px;
+    color: #fff;
+    font-size: .75rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    opacity: 0;
+    z-index: -1;
+    transition: .2s;
+}
+.card-5 .graph div:last-of-type .p-span span::after {
+    content: '';
+    border: 7px solid;
+    border-color: transparent #333 transparent transparent;
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    opacity: 0;
+    z-index: -1;
+    transition: .2s;
+}
+.card-5 .graph div:last-of-type .p-span span:hover::before,
+.card-5 .graph div:last-of-type .p-span span:hover::after {
+    opacity: 1;
+    z-index: 1000;
+}
+.card-5 .graph div:last-of-type .p-span:nth-of-type(1) {
+    height: 40%;
+    --variable: 40;
+}
+.card-5 .graph div:last-of-type .p-span:nth-of-type(2) {
+    height: 30%;
+    --variable: 30;
+}
+.card-5 .graph div:last-of-type .p-span:nth-of-type(3) {
+    height: 50%;
+    --variable: 50;
+}
+.card-5 .graph div:last-of-type .p-span:nth-of-type(4) {
+    height: 90%;
+    --variable: 90;
+}
+.card-5 .graph div:last-of-type .p-span:nth-of-type(5) {
+    height: 25%;
+    --variable: 25;
+}
+.card-5 .graph div:last-of-type .p-span:nth-of-type(6) {
+    height: 89%;
+    --variable: 89;
+}
+.card-5 .graph div:last-of-type .p-span:nth-of-type(7) {
+    height: 45%;
+    --variable: 45;
+}
+.card-5 .graph div:last-of-type .p-span:nth-of-type(8) {
+    height: 12%;
+    --variable: 12;
+}
+.card-5 .graph div:last-of-type .p-span:nth-of-type(9) {
+    height: 23%;
+    --variable: 23;
+}
+@keyframes topSmoothly {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+/* Start head-start */
+.header .head-start {
+    margin-top: 19rem;
+}
+@media (max-width: 767px) {
+    .header .head-start {
+        margin-top: 11rem;
+    }
+}
+.header .head-start .hero h1 {
+    font-size: 4.9rem;
+    font-weight: 900;
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #C87C00 0%, #8B3208 50%, #000 74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@media (max-width: 767px) {
+    .header .head-start .hero h1 {
+        font-size: 3.7rem;
+    }
+}
+.header .head-start .hero p {
+    max-width: 400px
+}
+.header .head-start .hero button {
+    font-size: .75rem;
+}
+.statistics {
+    position: relative;
+}
+.card-1, .card-2, .card-3, .card-4, .card-5 {
+    position: absolute;
+}
+.card-1 {
+    top: 110px;
+    right: -154px;
+}
+.card-2 {
+    right: 27px;
+    top: 200px;
+}
+.card-3 {
+    right: -134px;
+    top: -246px;
+}
+.card-4 {
+    top: -260px;
+    right: 220px;
+}
+.card-5 {
+    top: 30px;
+    right: 210px;
+}
+/* end head-start */
+
+.header .clients div div {
+    height: 30px;
+    width: 120px;
+}
+.header .clients div div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* End Header */
