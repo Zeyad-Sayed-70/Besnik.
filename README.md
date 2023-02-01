@@ -39,5 +39,5 @@ Besnik. is a awesome landing page, full responsive &amp; beautiful design with A
 
 ## Live Demo
 
-> to Get a Try just [Click Here!](https://match-four-game.netlify.app/)
+> to Get a Try just [Click Here!](https://besnik2.netlify.app)
 
